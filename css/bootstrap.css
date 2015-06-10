@@ -6,19 +6,35 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  position: relative;
+  height: 100%;
 }
 body {
-  margin: 0;
+  height: 100%;
+  padding-bottom: 60px;
+}
+#wrap {
+  height: 100%;
+  overflow: auto;
+}
+.body-content {
+  min-height: 100%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+
+  /* フッタの高さ */
+  height: 50px;
+  background-color: #000000;
 }
 article,
 aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -1090,7 +1106,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #000000;
 }
 input,
 button,
@@ -1577,8 +1593,8 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4859,7 +4875,10 @@ a.badge:focus {
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: #000;
+  height: auto;
+	min-width: 800px;
+	min-height: 600px;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4882,7 +4901,7 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding: 48px 0;
+    padding: 0px 0;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
@@ -6581,4 +6600,23 @@ button.close {
     display: none !important;
   }
 }
+
+.gigapan {
+    min-height: 100%;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    overflow: hidden;
+}
+
+.gigapan iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 /*# sourceMappingURL=bootstrap.css.map */
